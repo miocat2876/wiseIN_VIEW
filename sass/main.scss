@@ -1,0 +1,290 @@
+@import './common/common';
+
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #1c1c1c;
+    position: fixed;
+    z-index: 1;
+    ul{
+        height: 100%;
+        @include fx($h:space-between,$v:center);
+
+        @include MD{
+            margin: 0 1rem;
+        }
+        margin: 0 2rem;
+        li{
+            padding: 0 0.5em;
+            &:nth-child(1){
+                width: auto; /* 168px */
+                height: auto; /* 61px */
+                overflow: visible;
+                white-space: pre;
+                font-weight: bold;
+                font-style: italic;
+                font-family: "Montserrat", serif;
+                color: #ffffff;
+                font-size: 36px;
+
+            }
+            &:nth-child(2){
+
+                width: calc(70vw - 110px);
+                @include fx($v:center);
+
+                @include XS{
+                    display: none;
+                }
+
+                select{
+                    width: 110px;
+                    height: 28px;
+                    border-radius: 0.375em;
+                    color: white;
+                    border: 1px solid white;
+                    background-color: #1c1c1c;
+                    font-size: 12px;
+                    line-height: 30px;
+                    padding: 0 0.5em;
+                    //background: url('arrow.jpg') no-repeat 95% 50%;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    margin-right: 2em;
+                }
+
+                input[type=text]{
+                    border-radius: 0.375em;
+                    font-size: 0.75rem;
+                    font-weight: bold;
+                    width: calc(90% - 110px);
+                    max-width: 1000px;
+                    padding-left: 0.5em;
+                    height: 30px;
+                    border: 0;
+                    line-height: 30px;
+                    vertical-align: middle;
+                    background-color: rgb(235, 235, 235);
+                    &:valid{
+                        background-color: white;
+                    }
+                }
+            }
+
+            &:nth-child(3){
+                span{
+                    color: white;
+                    font-size: 36px;
+                    cursor: pointer;
+                }
+                
+            }
+        }
+    }
+}
+
+.sidebar-wrap{
+    position: relative;
+    #bar-chk:checked + .sidebar{
+        display: block;
+    }
+    .sidebar{
+        position: fixed;
+        top: 100px;
+        height: 100vh;
+        background-color: #1c1c1c;
+        right: 0;
+        display: none;
+        color: white;
+        padding: 2em;
+        font-size: 14px;
+        animation: sidebar 0.5s ease-out;
+        z-index: 9999;
+        .info{
+            width: 170px;
+            @include fx($h:space-between,$v:center);
+            img{
+                height: 45px;
+            }
+            border: 1px solid white;
+            border-radius: 0.5em;
+            padding: 1.5em 1em;
+            margin-bottom: 2em;
+        }
+        .menu{
+            padding-left: 1em;
+            li{
+                padding: 1.25em 0;
+                &:nth-child(1){
+                    font-weight: bold;
+                }
+            }
+        }
+        .icon{
+            @include fx();
+            position: absolute;
+            bottom: calc(100px + 2em);
+            right: 2em;
+            li{
+                span{
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    
+    
+}
+
+
+.content-wrap{
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 150px;
+    @include MD{
+
+    }
+    .info-wrap{
+        @include fx($v:center);
+        position: fixed;
+        border-radius: 0.75em;
+        left: 5%;
+        width: 200px;
+        height: 150px;
+        border: 2px solid black;
+        font-weight: bold;
+        padding: 0.5em;
+        @include XXL{
+            display: none;
+        }
+
+        ul{
+            li{
+                &:first-child{
+                    color: #7102a5;
+                }
+                color: #949494;
+                margin: 1em 0;
+            }
+            
+        }
+    }
+    
+    .content-frame{
+        border: 1px solid black;
+        min-height: 200px;
+        margin-bottom: 3em;
+        border-radius: 1.5em;
+        padding: 2em;
+        position: relative;
+
+        div{
+            margin-bottom: 0.5em;
+        }
+
+        .title{
+            font-weight: bold;
+            font-size: 24px;
+            font-style: normal;
+            font-family: "Noto Sans KR", sans-serif;
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+        }
+
+        .writer-wrap{
+            @include fx($v:center);
+            position: relative;
+            p{
+                font-weight: 400;
+                font-style: normal;
+                font-family: "Noto Sans KR", sans-serif;
+                color: #949494;
+                font-size: 16px;
+                letter-spacing: 0px;
+                line-height: 1.2;
+                text-align: left;
+                cursor: pointer;
+            }
+            #writer-ck:checked + .writer-function{
+                @include fx($direction:column,$v:left,$h:center);
+            }
+            .writer-function{
+                display: none;
+                position: absolute;
+                top: 100%;
+                width: 150px;
+                padding: 1em 0;
+                background-color: rgba(163, 163, 163, 0.89);
+                border-radius: 0.25em;
+                font-size: 14px;
+                font-weight: 600;
+
+                li{
+                    color: #ffffff;
+                    padding: 0.375em 0;
+                    padding-left: 1em;
+                }
+
+            }
+
+            span{
+            }
+            
+
+
+        }
+
+        .subject{
+
+            font-weight: 400;
+            font-style: normal;
+            font-family: "Noto Sans KR", sans-serif;
+            color: #000000;
+            font-size: 18px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            text-align: left;
+
+        }
+    }
+    .answer .function{
+        position: absolute;
+        top: 2em;
+        right: 2em;
+        span{
+            padding-right: 0.25em;
+        }
+
+        @include XS{
+            position: static;
+        }
+    }
+}
+
+.top-arrow{
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    @include MD{
+        bottom: 5em;
+    }
+    span{
+
+        font-size: 36px;
+
+    }
+}
+
+@keyframes sidebar {
+
+    0%{
+        margin-right: -999px;
+    }
+
+    100%{
+        margin-right: 0;
+    }
+
+}
