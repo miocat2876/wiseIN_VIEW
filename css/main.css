@@ -1,9 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Song+Myung&display=swap");
 html, body, h1, h2, h3, h4, h5, h6, p, div, header, footer, section, aside, article, ul, ol, li, dl, dd, dt, fieldset {
   margin: 0;
   padding: 0;
@@ -59,6 +58,14 @@ a:link, a:visited, a:hover, a:active {
 }
 
 /**************** 반응형 ****************/
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+input, select {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
 header {
   width: 100%;
   height: 100px;
@@ -69,6 +76,7 @@ header {
 
 header ul {
   height: 100%;
+  margin: 0 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,7 +92,6 @@ header ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 2rem;
 }
 
 @media screen and (max-width: 992px) {
@@ -106,7 +113,7 @@ header ul li:nth-child(1) {
   white-space: pre;
   font-weight: bold;
   font-style: italic;
-  font-family: "Montserrat", serif;
+  font-family: 'Jua', sans-serif;
   color: #ffffff;
   font-size: 36px;
 }
@@ -197,6 +204,7 @@ header ul li:nth-child(3) span {
   -webkit-animation: sidebar 0.5s ease-out;
           animation: sidebar 0.5s ease-out;
   z-index: 9999;
+  width: 230px;
 }
 
 .sidebar-wrap .sidebar .info {
@@ -236,6 +244,50 @@ header ul li:nth-child(3) span {
 
 .sidebar-wrap .sidebar .menu li:nth-child(1) {
   font-weight: bold;
+}
+
+.sidebar-wrap .sidebar .search-bar {
+  position: relative;
+  width: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin: 1em;
+}
+
+.sidebar-wrap .sidebar .search-bar span {
+  color: #9999;
+  position: absolute;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1.2;
+  right: 2%;
+}
+
+.sidebar-wrap .sidebar .search-bar input[type=text] {
+  border-radius: 0.375em;
+  font-size: 0.75rem;
+  font-weight: bold;
+  height: 30px;
+  width: 100%;
+  border: 0;
+  line-height: 30px;
+  vertical-align: middle;
+  background-color: #ebebeb;
+  padding-left: 1em;
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar-wrap .sidebar .search-bar input[type=text] {
+    display: block;
+  }
+}
+
+.sidebar-wrap .sidebar .search-bar input[type=text]:valid {
+  background-color: white;
+}
+
+.sidebar-wrap .sidebar .search-bar:focus-within, .sidebar-wrap .sidebar .search-bar:hover {
+  width: 90%;
 }
 
 .sidebar-wrap .sidebar .icon {
@@ -290,8 +342,9 @@ header ul li:nth-child(3) span {
   left: 5%;
   width: 200px;
   height: 150px;
-  border: 2px solid black;
-  font-weight: bold;
+  border: 1px solid black;
+  font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
   padding: 0.5em;
 }
 
@@ -327,7 +380,6 @@ header ul li:nth-child(3) span {
   font-weight: bold;
   font-size: 24px;
   font-style: normal;
-  font-family: "Noto Sans KR", sans-serif;
   letter-spacing: -1.5px;
   line-height: 1.2;
 }
@@ -354,7 +406,6 @@ header ul li:nth-child(3) span {
 .content-wrap .content-frame .writer-wrap p {
   font-weight: 400;
   font-style: normal;
-  font-family: "Noto Sans KR", sans-serif;
   color: #949494;
   font-size: 16px;
   letter-spacing: 0px;
@@ -400,9 +451,9 @@ header ul li:nth-child(3) span {
 }
 
 .content-wrap .content-frame .subject {
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #000000;
   font-size: 18px;
   letter-spacing: -0.5px;
@@ -428,7 +479,7 @@ header ul li:nth-child(3) span {
 
 .top-arrow {
   position: fixed;
-  right: 2em;
+  right: 5%;
   bottom: 2em;
 }
 
@@ -439,7 +490,7 @@ header ul li:nth-child(3) span {
 }
 
 .top-arrow span {
-  font-size: 36px;
+  font-size: 48px;
 }
 
 @-webkit-keyframes sidebar {
@@ -457,5 +508,21 @@ header ul li:nth-child(3) span {
   }
   100% {
     margin-right: 0;
+  }
+}
+
+@-webkit-keyframes sidebar-search-bar {
+  0% {
+  }
+  100% {
+    width: 125px;
+  }
+}
+
+@keyframes sidebar-search-bar {
+  0% {
+  }
+  100% {
+    width: 125px;
   }
 }
