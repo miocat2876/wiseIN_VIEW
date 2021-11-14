@@ -29,7 +29,7 @@ header{
                 white-space: pre;
                 font-weight: bold;
                 font-style: italic;
-                font-family: 'Jua', sans-serif;
+                font-family: "Montserrat", serif;
                 color: #ffffff;
                 font-size: 36px;
 
@@ -197,6 +197,7 @@ header{
     margin: 0 auto;
     padding-top: 150px;
     @include MD{
+        margin: 0 1em;
 
     }
     .info-wrap{
