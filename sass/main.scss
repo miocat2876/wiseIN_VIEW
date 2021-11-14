@@ -2,6 +2,10 @@
 
 *{
     font-family: 'Noto Sans KR', sans-serif;
+    
+}
+body{
+    font-size: 14px;
 }
 input,select{
     font-family: 'IBM Plex Sans KR', sans-serif;
@@ -32,6 +36,7 @@ header{
                 font-family: "Montserrat", serif;
                 color: #ffffff;
                 font-size: 36px;
+                letter-spacing: -2px;
 
             }
             &:nth-child(2){
@@ -183,7 +188,7 @@ header{
             @include fx($h:right);
             li{
                 span{
-                    font-size: 32px;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -209,9 +214,10 @@ header{
         width: 200px;
         height: 150px;
         border: 1px solid black;
-        font-weight: 600;
-        font-family: 'Noto Sans KR', sans-serif;
-        padding: 0.5em;
+        font-style: normal;
+        font-family: "Noto Sans KR", sans-serif;
+        padding: 0.5em 1em;
+        font-weight: 300;
         @include XXL{
             display: none;
         }
@@ -220,6 +226,7 @@ header{
             li{
                 &:first-child{
                     color: #7102a5;
+                    font-weight: 600;
                 }
                 color: #949494;
                 margin: 1em 0;
@@ -265,6 +272,7 @@ header{
             }
 
             span{
+                font-size: 1.125rem;
             }
             
         }
@@ -286,6 +294,7 @@ header{
         top: 2em;
         right: 2em;
         span{
+            font-size: 1.25rem;
             padding-right: 0.25em;
         }
 

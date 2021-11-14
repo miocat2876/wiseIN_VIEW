@@ -63,6 +63,10 @@ a:link, a:visited, a:hover, a:active {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+body {
+  font-size: 14px;
+}
+
 input, select {
   font-family: 'IBM Plex Sans KR', sans-serif;
 }
@@ -117,6 +121,7 @@ header ul li:nth-child(1) {
   font-family: "Montserrat", serif;
   color: #ffffff;
   font-size: 36px;
+  letter-spacing: -2px;
 }
 
 header ul li:nth-child(2) {
@@ -356,7 +361,7 @@ header ul li:nth-child(3) span {
 }
 
 .sidebar-wrap .sidebar .icon li span {
-  font-size: 32px;
+  font-size: 1.5rem;
 }
 
 .content-wrap {
@@ -393,9 +398,10 @@ header ul li:nth-child(3) span {
   width: 200px;
   height: 150px;
   border: 1px solid black;
-  font-weight: 600;
-  font-family: 'Noto Sans KR', sans-serif;
-  padding: 0.5em;
+  font-style: normal;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 0.5em 1em;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 1500px) {
@@ -411,6 +417,7 @@ header ul li:nth-child(3) span {
 
 .content-wrap .info-wrap ul li:first-child {
   color: #7102a5;
+  font-weight: 600;
 }
 
 .content-wrap .content-frame {
@@ -464,6 +471,10 @@ header ul li:nth-child(3) span {
   cursor: pointer;
 }
 
+.content-wrap .content-frame .writer-wrap span {
+  font-size: 1.125rem;
+}
+
 .content-wrap .content-frame .subject {
   font-weight: 300;
   font-style: normal;
@@ -482,6 +493,7 @@ header ul li:nth-child(3) span {
 }
 
 .content-wrap .answer .function span {
+  font-size: 1.25rem;
   padding-right: 0.25em;
 }
 
