@@ -42,23 +42,27 @@ header{
                 @include XS{
                     display: none;
                 }
-
-                select{
-                    width: 110px;
-                    height: 28px;
-                    border-radius: 0.375em;
-                    color: white;
-                    border: 1px solid white;
-                    background-color: #1c1c1c;
-                    font-size: 12px;
-                    line-height: 30px;
-                    padding: 0 0.5em;
-                    //background: url('arrow.jpg') no-repeat 95% 50%;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    margin-right: 2em;
+                .select-wrap{
+                    position: relative;
+                    @include fx($v:center);
+                    select{
+                        width: 110px;
+                        height: 28px;
+                        border-radius: 0.375em;
+                        color: white;
+                        border: 1px solid white;
+                        background-color: #1c1c1c;
+                        font-size: 12px;
+                        line-height: 30px;
+                        padding: 0 0.5em;
+                        margin-right: 2em;
+                        -webkit-appearance: none; /* 화살표 없애기 for chrome*/
+                        -moz-appearance: none;    /* 화살표 없애기 for firefox*/
+                        appearance: none;         /* 화살표 없애기 공통*/
+                        background: url(../image/select_arrow.jpg) no-repeat right;
+                    }
                 }
+                
 
                 input[type=text]{
                     border-radius: 0.375em;
@@ -265,10 +269,7 @@ header{
             span{
             }
             
-
-
         }
-
         .subject{
 
             font-weight: 300;
