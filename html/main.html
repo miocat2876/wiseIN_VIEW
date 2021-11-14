@@ -34,9 +34,16 @@
         <input type="checkbox" name="" id="bar-chk" style="display: none;">
         <div class="sidebar">
             <div class="info">
-                <img src="../image/test1.png" alt="">
-                <p>서은빈(직위)<br>OK 저축은행</p>
+                <img src="../image/test1.png" alt=""> 
+                <label for="my-function-chk">서은빈(직위)<br>OK 저축은행</label>
+                <input type="checkbox" name="" id="my-function-chk" style="display: none;">
+                <ul class="person-function">
+                    <li><a href="#">정보 수정</a></li>
+                    <li><a href="#">질문 모아 보기</a></li>
+                    <li><a href="#">답변 모아 보기</a></li>
+                </ul>
             </div>
+            
             <ul class="menu">
                 <li><a href="#">질문하고 싶어요</a></li>
                 <li><a href="#">Tech Tip</a></li>
@@ -83,7 +90,7 @@
 
             <div class="writer-wrap">
                 <p class="writer">서은빈 (OK저축은행)</p>
-                <ul class="writer-function">
+                <ul class="person-function">
                     <li><a href="#">메일 전송</a></li>
                     <li><a href="#">질문 모아 보기</a></li>
                     <li><a href="#">답변 모아 보기</a></li>
@@ -125,7 +132,7 @@
                 </div>
                 <div class="writer-wrap">
                     <p class="writer">김경민 (OK저축은행)</p>
-                    <ul class="writer-function">
+                    <ul class="person-function">
                         <li><a href="#">메일 전송</a></li>
                         <li><a href="#">질문 모아 보기</a></li>
                         <li><a href="#">답변 모아 보기</a></li>
@@ -157,6 +164,8 @@
 
     <script>
         let writer = document.getElementsByClassName("writer")
+        let myInfo = document.getElementById("my-info")
+        let infoFunction = document.getElementById("info-function")
 
         Array.from(writer).forEach(function(element) {
             element.addEventListener('click', function(e) {
@@ -167,6 +176,13 @@
                     e.target.nextElementSibling.style.display = 'block';
                 }
             });
+        });
+        myInfo.addEventListener('click', function(e) {
+            if(infoFunction.style.display === 'block'){
+                infoFunction.style.display = 'none';
+            }else{
+                infoFunction.style.display = 'block';
+            }
         });
 
     </script>

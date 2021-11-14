@@ -208,6 +208,7 @@ header ul li:nth-child(3) span {
 }
 
 .sidebar-wrap .sidebar .info {
+  position: relative;
   width: 170px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,6 +233,14 @@ header ul li:nth-child(3) span {
 
 .sidebar-wrap .sidebar .info img {
   height: 45px;
+}
+
+.sidebar-wrap .sidebar .info label {
+  cursor: pointer;
+}
+
+.sidebar-wrap .sidebar .info #my-function-chk:checked + .person-function {
+  display: block;
 }
 
 .sidebar-wrap .sidebar .menu {
@@ -415,42 +424,6 @@ header ul li:nth-child(3) span {
   cursor: pointer;
 }
 
-.content-wrap .content-frame .writer-wrap #writer-ck:checked + .writer-function {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.content-wrap .content-frame .writer-wrap .writer-function {
-  display: none;
-  position: absolute;
-  top: 100%;
-  width: 150px;
-  padding: 1em 0;
-  background-color: rgba(163, 163, 163, 0.89);
-  border-radius: 0.25em;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.content-wrap .content-frame .writer-wrap .writer-function li {
-  color: #ffffff;
-  padding: 0.375em 0;
-  padding-left: 1em;
-}
-
 .content-wrap .content-frame .subject {
   font-weight: 300;
   font-style: normal;
@@ -526,4 +499,23 @@ header ul li:nth-child(3) span {
   100% {
     width: 125px;
   }
+}
+
+.person-function {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  padding: 1em 0;
+  background-color: rgba(163, 163, 163, 0.89);
+  border-radius: 0.25em;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.person-function li {
+  color: #ffffff;
+  padding: 0.375em 0;
+  padding-left: 1em;
 }

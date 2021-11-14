@@ -109,15 +109,24 @@ header{
         z-index: 9999;
         width: 230px;
         .info{
+            position: relative;
             width: 170px;
             @include fx($h:space-between,$v:center);
             img{
                 height: 45px;
             }
+            label{
+                cursor: pointer;
+            }
+            #my-function-chk:checked + .person-function{
+                display: block;
+
+            }
             border: 1px solid white;
             border-radius: 0.5em;
             padding: 1.5em 1em;
             margin-bottom: 2em;
+            
         }
         .menu{
             padding-left: 1em;
@@ -252,27 +261,6 @@ header{
                 text-align: left;
                 cursor: pointer;
             }
-            #writer-ck:checked + .writer-function{
-                @include fx($direction:column,$v:left,$h:center);
-            }
-            .writer-function{
-                display: none;
-                position: absolute;
-                top: 100%;
-                width: 150px;
-                padding: 1em 0;
-                background-color: rgba(163, 163, 163, 0.89);
-                border-radius: 0.25em;
-                font-size: 14px;
-                font-weight: 600;
-
-                li{
-                    color: #ffffff;
-                    padding: 0.375em 0;
-                    padding-left: 1em;
-                }
-
-            }
 
             span{
             }
@@ -341,6 +329,26 @@ header{
 
     100%{
         width: 125px;
+    }
+
+}
+
+.person-function{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    padding: 1em 0;
+    background-color: rgba(163, 163, 163, 0.89);
+    border-radius: 0.25em;
+    font-size: 14px;
+    font-weight: 600;
+
+    li{
+        color: #ffffff;
+        padding: 0.375em 0;
+        padding-left: 1em;
     }
 
 }
