@@ -164,25 +164,15 @@
 
     <script>
         let writer = document.getElementsByClassName("writer")
-        let myInfo = document.getElementById("my-info")
-        let infoFunction = document.getElementById("info-function")
 
         Array.from(writer).forEach(function(element) {
             element.addEventListener('click', function(e) {
-
                 if(e.target.nextElementSibling.style.display === 'block'){
                     e.target.nextElementSibling.style.display = 'none';
                 }else{
                     e.target.nextElementSibling.style.display = 'block';
                 }
             });
-        });
-        myInfo.addEventListener('click', function(e) {
-            if(infoFunction.style.display === 'block'){
-                infoFunction.style.display = 'none';
-            }else{
-                infoFunction.style.display = 'block';
-            }
         });
 
     </script>
