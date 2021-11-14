@@ -252,6 +252,13 @@ header ul li:nth-child(3) span {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   margin: 1em;
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar-wrap .sidebar .search-bar {
+    display: block;
+  }
 }
 
 .sidebar-wrap .sidebar .search-bar span {
@@ -274,12 +281,6 @@ header ul li:nth-child(3) span {
   vertical-align: middle;
   background-color: #ebebeb;
   padding-left: 1em;
-}
-
-@media screen and (max-width: 576px) {
-  .sidebar-wrap .sidebar .search-bar input[type=text] {
-    display: block;
-  }
 }
 
 .sidebar-wrap .sidebar .search-bar input[type=text]:valid {
