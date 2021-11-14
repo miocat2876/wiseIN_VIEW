@@ -97,12 +97,13 @@ header{
 .sidebar-wrap{
     position: relative;
     #bar-chk:checked + .sidebar{
-        display: block;
+        @include fx($direction:column,$h:space-between);
+        padding-bottom: 100px;
     }
     .sidebar{
         position: fixed;
         top: 100px;
-        height: 100vh;
+        min-height: 100vh;
         background-color: #1c1c1c;
         right: 0;
         display: none;
@@ -176,14 +177,9 @@ header{
             &:focus-within,&:hover{
                 width: 90%;
             }
-        }
-
-            
+        }  
         .icon{
-            @include fx();
-            position: absolute;
-            bottom: calc(100px + 2em);
-            right: 2em;
+            @include fx($h:right);
             li{
                 span{
                     font-size: 32px;
