@@ -521,8 +521,33 @@ input, select {
   color: #949494;
 }
 
+.xs-off {
+  display: inline-block;
+}
+
+@media screen and (max-width: 576px) {
+  .xs-off {
+    display: none;
+  }
+}
+
+.xs-on {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .xs-on {
+    display: inline-block;
+  }
+}
+
 .content-wrap {
   max-width: 1400px;
+}
+
+.content-wrap {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 .content-wrap .content-frame {
@@ -659,6 +684,12 @@ input, select {
   font-size: 14px;
 }
 
+@media screen and (max-width: 576px) {
+  .content-wrap .board-list .board-line .board-cell {
+    font-size: 12px;
+  }
+}
+
 .content-wrap .board-list .board-line .board-no {
   -ms-flex-preferred-size: 30px;
       flex-basis: 30px;
@@ -667,10 +698,10 @@ input, select {
 .content-wrap .board-list .board-line .board-category {
   position: relative;
   cursor: pointer;
-  -ms-flex-preferred-size: 200px;
-      flex-basis: 200px;
-  -ms-flex-negative: 2;
-      flex-shrink: 2;
+  -ms-flex-preferred-size: 160px;
+      flex-basis: 160px;
+  -ms-flex-negative: 2.3;
+      flex-shrink: 2.3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,17 +723,23 @@ input, select {
   width: 100px;
 }
 
+@media screen and (max-width: 576px) {
+  .content-wrap .board-list .board-line .board-category {
+    font-size: 10px;
+  }
+}
+
 .content-wrap .board-list .board-line .board-title {
   position: relative;
   cursor: pointer;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
   -ms-flex-negative: 3;
       flex-shrink: 3;
   font-size: 16px;
   text-align: left;
   display: inline-block;
-  width: 80%;
+  width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -725,6 +762,12 @@ input, select {
 
 .content-wrap .board-list .board-line .board-title .person-function {
   width: 100px;
+}
+
+@media screen and (max-width: 576px) {
+  .content-wrap .board-list .board-line .board-title {
+    font-size: 14px;
+  }
 }
 
 .content-wrap .board-list .board-line .board-answer {
@@ -759,6 +802,12 @@ input, select {
 .content-wrap .board-list .board-line .board-date {
   -ms-flex-preferred-size: 100px;
       flex-basis: 100px;
+}
+
+@media screen and (max-width: 576px) {
+  .content-wrap .board-list .board-line .board-date {
+    display: none;
+  }
 }
 
 .content-wrap .search-wrap {

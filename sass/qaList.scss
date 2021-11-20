@@ -5,6 +5,8 @@
     max-width: 1400px;
 }
 .content-wrap{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     .content-frame{
         margin-bottom: 1.5em;
     }
@@ -58,6 +60,9 @@
             .board-cell{
                 text-align: center;
                 font-size: 14px;
+                @include XS{
+                    font-size: 12px;
+                }
             }
             .board-no{
                 flex-basis: 30px;
@@ -65,24 +70,30 @@
             .board-category{
                 position: relative;
                 cursor: pointer;
-                flex-basis: 200px;
-                flex-shrink : 2;
+                flex-basis: 160px;
+                flex-shrink : 2.3;
                 @include fx($v:center,$h:center,$w:nowrap);
                 .person-function{
                     width: 100px;
+                }
+                @include XS{
+                    font-size: 10px;
                 }
             }
             .board-title{
                 position: relative;
                 cursor: pointer;
-                flex-basis: 100%;
+                flex-basis: 80%;
                 flex-shrink : 3;
                 font-size: 16px;
                 text-align: left;
-                @include ellipsis($w:80%);
+                @include ellipsis($w:90%);
                 @include fx($v:center,$w:nowrap);
                 .person-function{
                     width: 100px;
+                }
+                @include XS{
+                    font-size: 14px;
                 }
             }
             .board-answer{
@@ -104,6 +115,9 @@
             }
             .board-date{
                 flex-basis: 100px;
+                @include XS{
+                    display: none;
+                }
             }
 
         }

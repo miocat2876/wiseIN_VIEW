@@ -246,3 +246,17 @@ input,select{
 .gray{
     color: #949494;
 }
+
+.xs-off{
+    display: inline-block;
+    @include XS{
+        display: none;
+    }
+}
+
+.xs-on{
+    display: none;
+    @include XS{
+        display: inline-block;
+    }
+}

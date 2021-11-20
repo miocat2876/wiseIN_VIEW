@@ -521,6 +521,26 @@ input, select {
   color: #949494;
 }
 
+.xs-off {
+  display: inline-block;
+}
+
+@media screen and (max-width: 576px) {
+  .xs-off {
+    display: none;
+  }
+}
+
+.xs-on {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .xs-on {
+    display: inline-block;
+  }
+}
+
 .content-wrap {
   max-width: 900px;
   margin: 0 auto;
