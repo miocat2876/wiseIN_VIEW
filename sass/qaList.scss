@@ -14,10 +14,15 @@
         @include XS{
             @include fx($h:space-between,$v:center);
         }
-        p{
+        .category-group{
+            position: relative;
             display: none;
+            cursor: pointer;
             @include XS{
                 @include fx($h:center,$v:center);
+            }
+            .person-function{
+                width: 100px;
             }
         }
         button{
@@ -58,17 +63,27 @@
                 flex-basis: 30px;
             }
             .board-category{
+                position: relative;
+                cursor: pointer;
                 flex-basis: 200px;
                 flex-shrink : 2;
                 @include fx($v:center,$h:center,$w:nowrap);
+                .person-function{
+                    width: 100px;
+                }
             }
             .board-title{
+                position: relative;
+                cursor: pointer;
                 flex-basis: 100%;
                 flex-shrink : 3;
                 font-size: 16px;
                 text-align: left;
                 @include ellipsis($w:80%);
                 @include fx($v:center,$w:nowrap);
+                .person-function{
+                    width: 100px;
+                }
             }
             .board-answer{
                 flex-basis: 80px;

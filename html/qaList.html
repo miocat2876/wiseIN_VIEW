@@ -80,11 +80,18 @@
     <div class="content-wrap">
         <section class="content-frame">
             <div class="content-top-group">
-                <p> 제목(가나다)
+                <div class="category-group">
+                    <p class="title-select">제목(가나다)</p>
+                    <ul class="person-function">
+                        <li><a href="#">제목</a></li>
+                        <li><a href="#">카테고리</a></li>
+                        <li><a href="#">글쓴이</a></li>
+                    </ul>
                     <span class="material-icons">
                         expand_more
                     </span>
-                </p>
+                </div>
+                
                 <button type="button"></button>
             </div>
             <div class="board-list">
@@ -92,7 +99,12 @@
                     <div class="board-cell board-no">
                     </div>
                     <div class="board-cell board-category purple2">
-                        카테고리
+                        <p class="category-select">카테고리</p>
+                        <ul class="person-function">
+                            <li><a href="#">FRONT</a></li>
+                            <li><a href="#">BACK</a></li>
+                            <li><a href="#">DB</a></li>
+                        </ul>
                         <span class="material-icons">
                             expand_more
                         </span>
@@ -493,10 +505,31 @@
 
     <script>
         let writer = document.getElementsByClassName("writer");
-        
+        let categorySelect = document.getElementsByClassName("category-select");
+        let titleSelect = document.getElementsByClassName("title-select");
 
         Array.from(writer).forEach(function(element) {
             element.addEventListener('click', function(e) {
+                if(e.target.nextElementSibling.style.display === 'block'){
+                    e.target.nextElementSibling.style.display = 'none';
+                }else{
+                    e.target.nextElementSibling.style.display = 'block';
+                }
+            });
+        });
+        Array.from(categorySelect).forEach(function(element) {
+            element.addEventListener('click', function(e) {
+                if(e.target.nextElementSibling.style.display === 'block'){
+                    e.target.nextElementSibling.style.display = 'none';
+                }else{
+                    e.target.nextElementSibling.style.display = 'block';
+                }
+            });
+        });
+
+        Array.from(titleSelect).forEach(function(element) {
+            element.addEventListener('click', function(e) {
+                console.dir(element);
                 if(e.target.nextElementSibling.style.display === 'block'){
                     e.target.nextElementSibling.style.display = 'none';
                 }else{
