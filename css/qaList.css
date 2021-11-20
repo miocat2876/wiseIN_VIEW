@@ -911,6 +911,12 @@ input, select {
   cursor: pointer;
 }
 
+@media screen and (max-width: 576px) {
+  .content-wrap .pageno-group li {
+    font-size: 14px;
+  }
+}
+
 .content-wrap .pageno-group .current {
   color: #7E57C2;
 }

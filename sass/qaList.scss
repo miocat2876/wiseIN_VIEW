@@ -171,6 +171,9 @@
             padding-right: 0.25em;
             color: $gray;
             cursor: pointer;
+            @include XS{
+                font-size: 14px;
+            }
         }
         .current{
             color: $pointColor;
