@@ -98,7 +98,6 @@
         display: none;
         @include XS{
             @include fx($h:center,$v:center);
-            margin-bottom: 1.5em;
         }
         .select-wrap{
             @include fx($v:center);
@@ -137,6 +136,7 @@
     
     .pageno-group{
         @include fx($h:center);
+        margin: 1.5em 0;
         li{
             font-size: 16px;
             padding-right: 0.25em;

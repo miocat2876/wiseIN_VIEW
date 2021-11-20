@@ -764,7 +764,6 @@ input, select {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-bottom: 1.5em;
   }
 }
 
@@ -835,6 +834,7 @@ input, select {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: 1.5em 0;
 }
 
 .content-wrap .pageno-group li {
