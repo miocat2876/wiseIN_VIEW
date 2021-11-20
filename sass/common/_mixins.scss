@@ -27,6 +27,12 @@
 @mixin shadow($x:5px,$y:5px,$b:5px,$o:0.1) {
 	box-shadow: $x $y $b rgba(0,0,0,$o);
 }
+@mixin shadow-btn($x:2px,$y:2px,$b:2px,$o:rgb(177, 165, 165)) {
+	box-shadow: $x $y $b $o;
+	&:active{
+		box-shadow:none;
+	}
+}
 @mixin shadow-light($x:0,$y:0,$b:5px,$o:0.1) {
 	box-shadow: 5px 5px 10px rgba(255,255,255,$o);
 }
