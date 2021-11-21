@@ -724,8 +724,8 @@ input, select {
 }
 
 .content-frame .board-wrap .board-list .board-line .board-map {
-  -ms-flex-preferred-size: 70px;
-      flex-basis: 70px;
+  -ms-flex-preferred-size: 120px;
+      flex-basis: 120px;
 }
 
 .content-frame .board-wrap .button-wrap {
@@ -743,6 +743,35 @@ input, select {
 .content-frame .board-wrap .button-wrap input[type=button] {
   background-color: #7E57C2;
   color: white;
+}
+
+.content-frame .pageNo-wrap .pageno-group {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .content-frame .pageNo-wrap .pageno-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.content-frame .pageNo-wrap .pageno-group li {
+  font-size: 16px;
+  padding-right: 0.125em;
 }
 
 .map-wrap {

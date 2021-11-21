@@ -62,7 +62,7 @@
                     
                 }
                 .board-map{
-                    flex-basis: 70px;
+                    flex-basis: 120px;
                 }
             }
         }
@@ -76,6 +76,18 @@
             input[type=button]{
                 background-color: $pointColor;
                 color: $white;
+            }
+        }
+    }
+    .pageNo-wrap{
+        .pageno-group{
+            display: none;
+            @include MD{
+                @include fx($h:center,$v:center);
+            }
+            li{
+                font-size: 16px;
+                padding-right: 0.125em;
             }
         }
     }
