@@ -93,9 +93,10 @@ input,select{
         bottom: 5em;
     }
     span{
-
         font-size: 48px;
-
+    }
+    @include XS{
+        display: none;
     }
 }
 

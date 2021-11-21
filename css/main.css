@@ -303,6 +303,12 @@ input, select {
   font-size: 48px;
 }
 
+@media screen and (max-width: 576px) {
+  .top-arrow {
+    display: none;
+  }
+}
+
 @-webkit-keyframes sidebar {
   0% {
     margin-right: -999px;
