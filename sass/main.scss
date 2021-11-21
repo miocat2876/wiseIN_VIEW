@@ -9,35 +9,6 @@
         margin: 0 1em;
 
     }
-    .info-wrap{
-        @include fx($v:center);
-        position: fixed;
-        border-radius: 0.75em;
-        left: 5%;
-        width: 200px;
-        height: 150px;
-        border: 1px solid black;
-        font-style: normal;
-        font-family: "Noto Sans KR", sans-serif;
-        padding: 0.5em 1em;
-        font-weight: 300;
-        @include XXL{
-            display: none;
-        }
-
-        ul{
-            li{
-                &:first-child{
-                    color: #7102a5;
-                    font-weight: 600;
-                }
-                color: #949494;
-                margin: 1em 0;
-            }
-            
-        }
-    }
-    
     
     .answer .function{
         position: absolute;

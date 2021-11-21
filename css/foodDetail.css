@@ -594,7 +594,7 @@ input, select {
 }
 
 .content-wrap {
-  max-width: 1400px;
+  max-width: 950px;
   min-width: 350px;
 }
 
@@ -614,36 +614,38 @@ input, select {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: calc(100vh - 120px);
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 576px) {
   .content-frame {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 81vh;
+    direction: column;
   }
 }
 
-.content-frame .top-group {
-  display: none;
+.content-frame .food-info-wrap {
+  width: 50%;
+  padding: 2em;
 }
 
-.content-frame .top-group .category-wrap {
-  font-size: 16px;
+@media screen and (max-width: 576px) {
+  .content-frame .food-info-wrap {
+    width: 100%;
+  }
+}
+
+.content-frame .food-info-wrap .food-info-title {
+  font-size: 18px;
+}
+
+.content-frame .food-info-wrap .food-info-addr {
+  font-size: 14px;
+}
+
+.content-frame .food-info-wrap .food-info-content {
+  font-size: 15px;
+}
+
+.score-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,92 +661,18 @@ input, select {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  position: relative;
+  border-bottom: 2px solid #7E57C2;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5vh;
 }
 
-@media screen and (max-width: 992px) {
-  .content-frame .top-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-.content-frame .top-group input[type=button] {
-  background-color: #7E57C2;
-  color: white;
-}
-
-.content-frame .board-wrap {
-  position: relative;
-  width: 50%;
-  padding: 0 2em;
-}
-
-@media screen and (max-width: 992px) {
-  .content-frame .board-wrap {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-.content-frame .board-wrap .board-list {
-  font-size: 16px;
-}
-
-@media screen and (max-width: 992px) {
-  .content-frame .board-wrap .board-list .board-header {
-    display: none !important;
-  }
-}
-
-.content-frame .board-wrap .board-list .board-line {
-  padding: 0 1em;
+.food-board-wrap .food-board-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  border-bottom: 1px solid black;
-  text-align: center;
-  padding: 0.125em 0;
-}
-
-@media screen and (max-width: 992px) {
-  .content-frame .board-wrap .board-list .board-line {
-    padding: 0.375em 0;
-  }
-}
-
-.content-frame .board-wrap .board-list .board-line .board-cell {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -754,77 +682,44 @@ input, select {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-size: 18px;
 }
 
-.content-frame .board-wrap .board-list .board-line .board-category {
-  position: relative;
-  -ms-flex-preferred-size: 120px;
-      flex-basis: 120px;
+.food-board-wrap .food-board-writer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 0.5vh;
 }
 
-.content-frame .board-wrap .board-list .board-line .board-title {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -ms-flex-negative: 3;
-      flex-shrink: 3;
+.food-board-wrap .food-board-writer span {
+  margin-left: 0.25em;
+  font-size: 14px;
 }
 
-.content-frame .board-wrap .board-list .board-line .board-map {
-  -ms-flex-preferred-size: 80px;
-      flex-basis: 80px;
-}
-
-.content-frame .board-wrap .button-wrap {
-  position: absolute;
-  right: 2em;
-  bottom: 0;
-}
-
-@media screen and (max-width: 992px) {
-  .content-frame .board-wrap .button-wrap {
-    display: none;
-  }
-}
-
-.content-frame .board-wrap .button-wrap input[type=button] {
-  background-color: #7E57C2;
-  color: white;
-}
-
-.content-frame .pageNo-wrap .pageno-group {
-  display: none;
-}
-
-@media screen and (max-width: 992px) {
-  .content-frame .pageNo-wrap .pageno-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-.content-frame .pageNo-wrap .pageno-group li {
-  font-size: 16px;
-  padding-right: 0.125em;
+.food-board-wrap .food-board-img img {
+  max-width: 100%;
+  max-height: 300px;
 }
 
 .map-wrap {
   width: 50%;
+  height: 100%;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 576px) {
   .map-wrap {
     width: 100%;
     height: 40%;
@@ -833,5 +728,5 @@ input, select {
 
 .map-wrap #map {
   width: 100%;
-  height: 100%;
+  height: 250px;
 }
