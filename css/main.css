@@ -211,6 +211,8 @@ input, select {
   max-width: 900px;
   margin: 0 auto;
   padding-top: 100px;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
 }
 
 @media screen and (max-width: 992px) {

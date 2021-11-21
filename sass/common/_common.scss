@@ -19,6 +19,8 @@ input,select{
     max-width: 900px;
     margin: 0 auto;
     padding-top: 100px;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
     @include MD{
         margin: 0 1em;
 

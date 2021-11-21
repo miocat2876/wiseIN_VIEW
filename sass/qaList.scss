@@ -5,8 +5,6 @@
     max-width: 1400px;
 }
 .content-wrap{
-    padding-left: 1.5em;
-    padding-right: 1.5em;
     .content-frame{
         margin-bottom: 1.5em;
     }
@@ -71,12 +69,13 @@
                 position: relative;
                 cursor: pointer;
                 flex-basis: 160px;
-                flex-shrink : 2.3;
+                flex-shrink : 2;
                 @include fx($v:center,$h:center,$w:nowrap);
                 .person-function{
                     width: 100px;
                 }
                 @include XS{
+                    flex-basis: 100px;
                     font-size: 10px;
                 }
             }
