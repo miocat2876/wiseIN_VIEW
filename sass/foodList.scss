@@ -10,7 +10,7 @@
     height: calc(100vh - 120px);
     @include MD{
         @include fx($direction:column);
-        height: 80vh;
+        height: 81vh;
     }
     .top-group{
         display: none;
