@@ -551,6 +551,7 @@ input, select {
 
 .content-wrap {
   max-width: 1400px;
+  min-width: 350px;
 }
 
 .content-frame {
@@ -724,8 +725,8 @@ input, select {
 }
 
 .content-frame .board-wrap .board-list .board-line .board-map {
-  -ms-flex-preferred-size: 120px;
-      flex-basis: 120px;
+  -ms-flex-preferred-size: 80px;
+      flex-basis: 80px;
 }
 
 .content-frame .board-wrap .button-wrap {
@@ -780,7 +781,7 @@ input, select {
 
 @media screen and (max-width: 992px) {
   .map-wrap {
-    min-width: 100%;
+    width: 100%;
     height: 300px;
   }
 }

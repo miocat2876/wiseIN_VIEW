@@ -3,6 +3,7 @@
 
 .content-wrap{
     max-width: 1400px;
+    min-width: 350px;
 }
 .content-frame{
     @include fx();
@@ -62,7 +63,7 @@
                     
                 }
                 .board-map{
-                    flex-basis: 120px;
+                    flex-basis: 80px;
                 }
             }
         }
@@ -96,7 +97,7 @@
 .map-wrap{
     width: 50%;
     @include MD{
-        min-width: 100%;
+        width: 100%;
         height: 300px;
     }
     #map{
