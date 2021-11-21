@@ -780,7 +780,7 @@ input, select {
 
 @media screen and (max-width: 992px) {
   .map-wrap {
-    width: 100%;
+    min-width: 100%;
     height: 300px;
   }
 }
