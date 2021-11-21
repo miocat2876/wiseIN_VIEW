@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>메인</title>
         <link rel="stylesheet" href="../iconfont/material-icons.css">
-        <link rel="stylesheet" href="../css/qaList.css">
+        <link rel="stylesheet" href="../css/foodList.css">
     </head>
 <body>
 
@@ -78,9 +78,8 @@
     </div>
 
     <div class="content-wrap">
-        
         <section class="content-frame">
-
+            
         </section>
     </div>
 
@@ -92,21 +91,17 @@
         </a>
     </div>
 
-    <script>
-        let writer = document.getElementsByClassName("writer")
+    <script type="module" >
+        import * as event from '../js/common/event.js';
+        let writer = document.getElementsByClassName("writer");
+        let categorySelect = document.getElementsByClassName("category-select");
+        let titleSelect = document.getElementsByClassName("title-select");
 
-        Array.from(writer).forEach(function(element) {
-            element.addEventListener('click', function(e) {
-                if(e.target.nextElementSibling.style.display === 'block'){
-                    e.target.nextElementSibling.style.display = 'none';
-                }else{
-                    e.target.nextElementSibling.style.display = 'block';
-                }
-            });
-        });
+        event.clickDisplayChangeListener(writer);
+        event.clickDisplayChangeListener(categorySelect);
+        event.clickDisplayChangeListener(titleSelect);
 
     </script>
 
-    
 </body>
 </html>

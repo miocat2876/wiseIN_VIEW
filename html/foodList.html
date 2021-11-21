@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>메인</title>
+        <link rel="stylesheet" href="../iconfont/material-icons.css">
+        <link rel="stylesheet" href="../css/foodList.css">
+    </head>
+<body>
+
+    <header>
+        <ul>
+            <li class="logo"><a href="#">wiseIN</a></li>
+            <li class="search-wrap">
+                <div class="select-wrap">
+                    <select name="" id="search-list">
+                        <option value="front">Front</option>
+                    </select>
+                </div>
+                <input type="text" class="search-bar" placeholder="Type something…" required="required">
+            </li>
+            <li class="bar">
+                <label for="bar-chk">
+                    <span class="material-icons">
+                        menu
+                    </span>
+                </label>
+                
+            </li>
+        </ul>
+    </header>
+
+    <div class="sidebar-wrap">
+        <input type="checkbox" name="" id="bar-chk" style="display: none;">
+        <div class="sidebar">
+            <div class="top">
+                <div class="info">
+                    <img src="../image/test1.png" alt=""> 
+                    <label for="my-function-chk">서은빈(직위)<br>OK 저축은행</label>
+                    <input type="checkbox" name="" id="my-function-chk" style="display: none;">
+                    <ul class="person-function">
+                        <li><a href="#">정보 수정</a></li>
+                        <li><a href="#">질문 모아 보기</a></li>
+                        <li><a href="#">답변 모아 보기</a></li>
+                    </ul>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">질문하고 싶어요</a></li>
+                    <li><a href="#">Tech Tip</a></li>
+                    <li><a href="#">사이트 별 맛집 목록</a></li>
+                    <li><a href="#">현재 파견 리스트</a></li>
+                </ul>
+                <div class="search-bar">
+                    <span class="material-icons">
+                        search
+                    </span>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="bottom">
+                <ul class="icon">
+                    <li>
+                        <span class="material-icons">
+                            perm_identity
+                        </span>
+                        
+                    </li>
+                    <li>
+                        <span class="material-icons">
+                            link
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-wrap">
+        <section class="content-frame">
+            <div class="top-group">
+                <div class="category-wrap">
+                    <p class="category-select">지역(가나다)</p>
+                    <ul class="person-function">
+                        <li><a href="#">지역(가나다)</a></li>
+                        <li><a href="#">사이트(가나다)</a></li>
+                        <li><a href="#">맛집 개수</a></li>
+                    </ul>
+                    <span class="material-icons">
+                        expand_more
+                    </span>
+                </div>
+                <input type="button" value="추천">
+            </div>
+            <div class="map-wrap">
+                <div id="map"></div>
+            </div>
+            <div class="board-wrap">
+                <div class="board-list">
+                    <div class="board-line board-header">
+                        <div class="board-cell board-category purple2">
+                            <p class="category-select">location</p>
+                            <ul class="person-function">
+                                <li><a href="#">지역(가나다)</a></li>
+                                <li><a href="#">사이트(가나다)</a></li>
+                                <li><a href="#">맛집 개수</a></li>
+                            </ul>
+                            <span class="material-icons">
+                                expand_more
+                            </span>
+                        </div>
+                        <div class="board-cell board-title">
+                            <p>site</p>
+                            <span class="material-icons">
+                                expand_more
+                            </span>
+                        </div>
+                        <div class="board-cell board-map gray">
+                            맛집
+                            <span class="material-icons">
+                                expand_more
+                            </span>
+                        </div>
+                    </div>
+                    <div class="board-line">
+                        <div class="board-cell board-category purple2">
+                            여의도
+                        </div>
+                        <div class="board-cell board-title">
+                            수출입은행
+                        </div>
+                        <div class="board-cell board-map purple">
+                            <span class="material-icons">
+                                map
+                            </span>
+                            2
+                        </div>
+                    </div>
+                    <div class="board-line">
+                        <div class="board-cell board-category purple2">
+                            여의도
+                        </div>
+                        <div class="board-cell board-title">
+                            글씨 제한 필요글씨 제한 필요글씨 제한 필요글씨 제한 필요글씨 제한 필요글씨 제한 필요글씨 제한 필요
+                        </div>
+                        <div class="board-cell board-map purple">
+                            <span class="material-icons">
+                                map
+                            </span>
+                            2
+                        </div>
+                    </div>
+                    <div class="board-line">
+                        <div class="board-cell board-category purple2">
+                            여의도
+                        </div>
+                        <div class="board-cell board-title">
+                            집가고싶다
+                        </div>
+                        <div class="board-cell board-map purple">
+                            <span class="material-icons">
+                                map
+                            </span>
+                            2
+                        </div>
+                    </div>
+                </div>
+                <div class="button-wrap">
+                    <input type="button" value="추천">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="top-arrow">
+        <a href="#">
+            <span class="material-icons purple">
+                keyboard_arrow_up
+            </span>
+        </a>
+    </div>
+    <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=b34b600bb41cf3a0032ce43193d12339&libraries=services,clusterer,drawing"></script>
+    <script type="module">
+        import * as event from '../js/common/event.js';
+        var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+          mapOption = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 5 // 지도의 확대 레벨
+        };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+
+        let categorySelect = document.getElementsByClassName("category-select");
+
+        event.clickDisplayChangeListener(categorySelect);
+
+    </script>
+
+</body>
+</html>

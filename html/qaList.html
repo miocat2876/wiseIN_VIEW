@@ -502,43 +502,17 @@
         </a>
     </div>
 
-    <script>
+    <script type="module" >
+        import * as event from '../js/common/event.js';
         let writer = document.getElementsByClassName("writer");
         let categorySelect = document.getElementsByClassName("category-select");
         let titleSelect = document.getElementsByClassName("title-select");
 
-        Array.from(writer).forEach(function(element) {
-            element.addEventListener('click', function(e) {
-                if(e.target.nextElementSibling.style.display === 'block'){
-                    e.target.nextElementSibling.style.display = 'none';
-                }else{
-                    e.target.nextElementSibling.style.display = 'block';
-                }
-            });
-        });
-        Array.from(categorySelect).forEach(function(element) {
-            element.addEventListener('click', function(e) {
-                if(e.target.nextElementSibling.style.display === 'block'){
-                    e.target.nextElementSibling.style.display = 'none';
-                }else{
-                    e.target.nextElementSibling.style.display = 'block';
-                }
-            });
-        });
-
-        Array.from(titleSelect).forEach(function(element) {
-            element.addEventListener('click', function(e) {
-                console.dir(element);
-                if(e.target.nextElementSibling.style.display === 'block'){
-                    e.target.nextElementSibling.style.display = 'none';
-                }else{
-                    e.target.nextElementSibling.style.display = 'block';
-                }
-            });
-        });
+        event.clickDisplayChangeListener(writer);
+        event.clickDisplayChangeListener(categorySelect);
+        event.clickDisplayChangeListener(titleSelect);
 
     </script>
 
-    
 </body>
 </html>
