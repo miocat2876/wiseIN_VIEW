@@ -13,10 +13,12 @@
     }
     .food-info-wrap{
         width: 50%;
+        padding: 2em;
         @include XS{
             width: 100%;
+            padding: 0em;
         }
-        padding: 2em;
+        
         .food-info-title{
             font-size: 18px;
         }
